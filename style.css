@@ -1,0 +1,548 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif
+
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    width: 100vw;
+    overflow-x: hidden;
+    background: #010718;
+}
+.hero{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #010718;
+}
+nav{
+    display: flex;
+    width: 84%;
+    margin: auto;
+    padding: 20px 0;
+    align-items: center;
+    justify-content: space-between;
+   
+
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+   
+
+}
+nav ul li a{
+    text-decoration: none;
+    color: orange;
+    font-weight: bold;
+    position: relative;
+}
+nav ul li a::after{
+    content: "";
+    position: absolute;
+    background: skyblue;
+    width: 100%;
+    height: .1rem;
+    left: 0;
+    bottom: -5px;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+nav ul li a:hover::after{
+    transform: scaleX(1);
+}
+nav ul li a:hover{
+    color: skyblue;
+}
+
+.detel{
+    margin-left: 8%;
+    margin-top: 13%;
+
+}
+.detel h1{
+    font-size: 50px;
+    color: whitesmoke;
+    margin-bottom: 20px;
+}
+
+span{
+    color: orange;
+
+}
+.detel p{
+    color: #fdbb2f;
+    line-height: 22px;
+}
+.detel a{
+    background: #212121;
+    padding: 10px 18px;
+    text-decoration: none;
+    font-weight: bold;
+    color: peachpuff;
+    display: inline-block;
+    margin: 30px 0;
+    border-radius: 5px;
+}
+.detel a:hover{
+    color: aqua;
+}
+
+.images{
+    width: 35%;
+    height: 70%;
+    position: absolute;
+    bottom: 1%;
+    right: 100px;
+}
+.images img {
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    transition: bottom 1s, left 1s;
+}
+.images:hover .shape{
+    bottom: 40px;
+}
+.images:hover .boy1{
+    left: 45%;
+}
+
+
+/*----------------services---------------------*/
+
+#services{
+    padding: 30px 0;
+    color: white;
+    background: #010718;
+    font-size: 20px;
+    
+}
+.services-list{
+    display: flex;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+    color: red;
+    margin-right: 50px;
+    margin-left: 50px;
+    
+}
+
+
+.services-list div{
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+}
+.services-list div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.services-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.services-list div a{
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.services-list div:hover{
+    background: aqua;
+    transform: translateY(-10px);
+}
+/*---------------------work--------------------*/
+#portfolio{
+    padding: 50px 0;
+    background: #010718;
+    color: #fff;
+    
+}
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+    overflow: hidden;
+}
+
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.work img{
+    
+    width: 70%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+    
+    
+}
+.work img:hover{
+    background:#ff004f;
+}
+.layer{
+  
+    width: 74%;
+    height: 0%;
+    background: linear-gradient(rgba(0,0,0,0.6),#ff004f);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+.layer h3{
+    font-weight: 800;
+    margin-bottom: 20px;
+    font-size: 130%;
+}
+.layer a{
+    margin-top: 20px;
+    color: #ff004f;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background:#fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+.work:hover img{
+   transform:scale(1.1);
+}
+.work:hover .layer{
+    height: 100%;
+
+}
+.see-more-btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    transition: background 1s;
+}
+.see-more-btn:hover{
+    
+    background: #ff004f;
+}
+
+.sub-title{
+    font-size: 50px;
+}
+
+
+
+
+
+
+.hire button{
+   border: .1rem solid #4070F4;
+   font-size: .9rem;
+   padding: .6rem .5rem;
+   border-radius: .5rem;
+   cursor: pointer;
+   transition: .9s ease;
+}
+button:nth-child(1){
+    background: transparent;
+    color: honeydew;
+    
+}
+button:nth-child(2){
+    background: transparent;
+    color: honeydew;
+    margin-left: 1rem;
+}
+button:nth-child(1):hover{
+background: #4070F4;
+}
+button:nth-child(2):hover{
+    background: #4070F4;
+}
+ 
+    
+   /*------------------------------------------CONTACT-----------------------------------*/
+
+#cont{
+   
+    color: #fff;
+}
+
+.cont-left{
+  margin-left: 2%;
+  font-size: 22px;
+  margin-top: 50px;
+}
+
+.cont-left p{
+    margin-top: 50px;
+}
+.cont-left p i{
+    color: #ff004f;
+    font-size: 25px;
+    margin-right: 15px;
+    transition: transform .5s;
+}
+
+.cont-left p i:hover{
+    color: aqua;
+    transform: translateY(-5px);
+}
+.social-icons{
+    margin-top: 30px;
+
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform .5s;
+}
+.social-icons a:hover{
+    color: aqua;
+    transform: translateY(-5px);
+}
+
+.cont-right form{
+    width: 40%;
+    margin: -13% 45% ;
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #212121;
+    padding: 15px;
+    margin: 15px;
+    color: #ababab;
+    font-size: 18px;
+    border-radius: 12px;
+}
+.btn{
+    display: block;
+    margin: 5px auto;
+    width: fit-content;
+    border: 1px border #ff004f;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    transition: background 1s;
+    background: #010718;
+    cursor: pointer;
+}
+.btn:hover{
+    background: #ff004f;
+
+}
+.copyright{
+    color: #ff004f;
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    font-weight: 300;
+    margin-top: 210px;
+    background: #262626;
+}
+
+/*----about----*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+#about {
+    color: aqua;
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    position: relative;
+    align-items: center;
+    overflow-x: hidden;
+    justify-content: center;
+    background:#010718 ;
+    margin-top: 0%;
+}
+
+#about-right-part{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    padding: 20px;
+    gap: 50px;
+    justify-content: center; 
+    width: 100%;
+}
+#about-right-part #content-wrapper{
+    overflow-x: hidden;
+    text-wrap:nowrap;
+    display: flex;
+    text-align: center;    
+    transition: all 1s;
+}
+
+#about .content .text{
+    position: relative;
+    color: #4070F4;
+    font-size: 40px;
+    font-weight: 600;
+    cursor: default;
+
+}
+#about .content .text.first-text{
+    color: #fff;
+}
+#about .text.sec-text:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #010718;
+    border-left: 2px solid #4070F4;
+    animation: animate 4s steps(12)infinite;
+}
+@keyframes animate{
+    40%,60%{
+        left: 100%;
+    }
+    100%{
+        left: 100%;
+    }
+}
+
+
+
+#about .hire-me-btns button{
+   border: .1rem solid #4070F4;
+   font-size: .9rem;
+   position: relative;
+   padding: .6rem .5rem;
+   border-radius: .5rem;
+   cursor: pointer;
+   transition: .9s ease;
+}
+#about button:nth-child(1){
+    background: transparent;
+    color: honeydew;
+    
+}
+#about button:nth-child(2){
+    background: transparent;
+    color: honeydew;
+    margin-left: 1rem;
+}
+#about button:nth-child(1):hover{
+background: #4070F4;
+}
+#about button:nth-child(2):hover{
+    background: #4070F4;
+}
+#about .design{
+    position: relative;
+
+    
+}
+#about .design .circle{
+    aspect-ratio: 1;
+    border-radius: 50%;  
+    transform: translate(-1%,-50%)
+}
+#about .circle{
+    background: red;
+    width: 18rem;
+    background-image: url(./profile.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    right: 0;
+    box-shadow: 0 0 3rem #4070F4;
+    
+}
+#about .circle:hover{
+    box-shadow: 0 0 5rem aqua;
+}
+#about .tab-titles{
+    display: flex;
+   
+}
+#about .tab-links{
+    margin-right: 50px;
+    font-size: 30px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+#about .tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background:#ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 1s;
+}
+#about .tab-links.active-link::after{
+    width: 50%;
+}
+#about .tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+
+}
+#about .tab-contents ul li span{
+    color: #ff004f;
+    font-size: 25px;
+}
+#about .tab-contents{
+    display: none;
+    font-size: 20px;
+}
+#about .tab-contents.active-tab{
+    display: block;
+}
+
+#about-profile-image{
+    height: 70vh;
+    padding: 20px;
+    display: flex;
+    align-items: end;
+    
+}
